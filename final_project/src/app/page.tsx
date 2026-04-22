@@ -498,7 +498,7 @@ export default function Page() {
             </pre>
           </article>
 
-          <article className="note-card">
+          <article className="note-card note-card--benefits">
             <p className="mono eyebrow">Ideal system proposal</p>
             <h3>What the finished system would add</h3>
             <ul>
