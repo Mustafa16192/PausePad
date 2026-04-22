@@ -625,7 +625,7 @@ export default function Page() {
       <footer className="site-footer">
         <div>
           <p className="mono eyebrow">Team</p>
-          <p>Mustafa Mirza · Julia Norton · Marsalis Jolley · Andy Xu</p>
+          <p>Mustafa Mirza · Andy Xu · Skylar Song</p>
         </div>
         <div>
           <p className="mono eyebrow">PausePad</p>
