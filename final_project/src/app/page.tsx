@@ -112,44 +112,6 @@ const researchOutcomes = [
   "Escalation needed to stay gentle enough for shared spaces while still being noticeable.",
 ];
 
-const appendixLinks = [
-  {
-    label: "M1 concept proposal",
-    href: "/reports/m1-concept-proposal.pdf",
-    note: "Foundational ideation and scope selection",
-  },
-  {
-    label: "M2 analysis report",
-    href: "/reports/m2-analysis-report.pdf",
-    note: "Survey, diary study, persona, and journey map",
-  },
-  {
-    label: "M3 report",
-    href: "/reports/m3-report.pdf",
-    note: "Speed dating, enactments, and system direction",
-  },
-  {
-    label: "M4 prototype plan",
-    href: "/reports/m4-prototype-plan.md",
-    note: "Prototype logic and build plan",
-  },
-  {
-    label: "High-level architecture diagram",
-    href: "/reports/high-level-architecture-diagram.md",
-    note: "System flow and component relationships",
-  },
-  {
-    label: "M4 control logic excerpt",
-    href: "/reports/m4-code-excerpt.md",
-    note: "State machine and sensor logic used in the prototype",
-  },
-  {
-    label: "Final slides",
-    href: "/reports/final-presentation-slides.pdf",
-    note: "Final presentation deck and architecture diagram",
-  },
-];
-
 const idealFlow = [
   {
     title: "Phone docked",
@@ -203,7 +165,6 @@ export default function Page() {
           <a href="#studies">Studies</a>
           <a href="#concept">Concept</a>
           <a href="#ideal">Ideal proposal</a>
-          <a href="#appendix">Appendix</a>
         </nav>
       </header>
 
@@ -231,9 +192,6 @@ export default function Page() {
           <div className="hero-actions">
             <a className="pill-button pill-button--solid" href="#video">
               Watch video
-            </a>
-            <a className="pill-button" href="#appendix">
-              See appendix
             </a>
           </div>
 
@@ -601,24 +559,6 @@ export default function Page() {
               demonstration of the hardware/software split.
             </p>
           </article>
-        </div>
-      </section>
-
-      <section className="section section--light section--appendix section--utility" id="appendix">
-        <SectionHeading
-          eyebrow="Appendix"
-          title="Source materials and supporting assets"
-          description="These links let graders and future viewers trace the project back through the milestones and final artifacts."
-        />
-
-        <div className="appendix-grid">
-          {appendixLinks.map((item) => (
-            <a key={item.label} className="appendix-card" href={item.href}>
-              <p className="mono eyebrow">{item.label}</p>
-              <h3>{item.note}</h3>
-              <span className="appendix-link">Open file</span>
-            </a>
-          ))}
         </div>
       </section>
 
