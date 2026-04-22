@@ -106,6 +106,12 @@ const storySignals = [
   "That means the intervention has to feel ambient, immediate, and physically easier than continuing to scroll.",
 ];
 
+const researchOutcomes = [
+  "A separate self-care object felt like extra effort, especially at the end of the day.",
+  "The dock format worked because it attached to an existing phone habit instead of inventing a new ritual.",
+  "Escalation needed to stay gentle enough for shared spaces while still being noticeable.",
+];
+
 const appendixLinks = [
   {
     label: "M1 concept proposal",
@@ -201,7 +207,7 @@ export default function Page() {
         </nav>
       </header>
 
-      <section className="hero section section--dark section--hero" id="top">
+      <section className="hero section section--dark section--hero section--showcase" id="top">
         <div className="hero-copy">
           <p className="mono eyebrow">M5 / Final Proposal + Video</p>
           <h1>
@@ -213,9 +219,9 @@ export default function Page() {
             shift out of passive scrolling, and move toward rest.
           </p>
 
-          <div className="hero-support-grid" aria-label="Project framing">
+          <div className="hero-support-grid hero-meta-grid" aria-label="Project framing">
             {heroPoints.map((point) => (
-              <article key={point.label} className="support-card">
+              <article key={point.label} className="support-card support-card--meta">
                 <p className="mono eyebrow">{point.label}</p>
                 <p>{point.text}</p>
               </article>
@@ -246,11 +252,12 @@ export default function Page() {
           title="PausePad dock + app"
           description="The final product image should present PausePad as one connected dock-and-app system."
           caption="16:9 / hero visual"
+          className="placeholder-frame--hero-asset"
           variant="product"
         />
       </section>
 
-      <section className="section section--light section--story section--split" id="story">
+      <section className="section section--light section--story section--split section--editorial" id="story">
         <SectionHeading
           eyebrow="Motivation"
           title="The problem is not awareness. It is follow-through."
@@ -285,31 +292,47 @@ export default function Page() {
             title="The nightly scroll loop"
             description="Visualize the late-night behavior the team is designing against."
             caption="Research framing / context"
+            className="placeholder-frame--editorial-asset"
             variant="research"
           />
         </div>
       </section>
 
-      <section className="section section--light section--studies" id="studies">
+      <section className="section section--light section--studies section--editorial" id="studies">
         <SectionHeading
           eyebrow="Key insights"
           title="Three studies converged on the same direction."
           description="Survey data, diary reflections, and user enactments all pointed toward the same design constraints: low effort, clear physical action, and gentle escalation."
         />
 
-        <div className="insight-grid">
-          {insights.map((insight) => (
-            <article key={insight.number} className="insight-card">
-              <div className="mono insight-number">{insight.number}</div>
-              <h3>{insight.title}</h3>
-              <p>{insight.text}</p>
-            </article>
-          ))}
+        <div className="research-layout">
+          <div className="insight-grid">
+            {insights.map((insight) => (
+              <article key={insight.number} className="insight-card">
+                <div className="mono insight-number">{insight.number}</div>
+                <h3>{insight.title}</h3>
+                <p>{insight.text}</p>
+              </article>
+            ))}
+          </div>
+
+          <article className="note-card note-card--summary">
+            <p className="mono eyebrow">What the studies changed</p>
+            <h3>The final direction became narrower and more physical.</h3>
+            <div className="summary-points">
+              {researchOutcomes.map((point) => (
+                <div key={point} className="summary-point">
+                  <span className="summary-point__line" aria-hidden="true" />
+                  <p>{point}</p>
+                </div>
+              ))}
+            </div>
+          </article>
         </div>
 
-        <div className="study-grid">
+        <div className="study-grid study-grid--timeline">
           {studies.map((study) => (
-            <article key={study.title} className="study-block">
+            <article key={study.title} className="study-block study-block--timeline">
               <p className="mono eyebrow">{study.title}</p>
               <h3>{study.detail}</h3>
               <ul>
@@ -322,19 +345,20 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="section section--light section--evolution">
+      <section className="section section--light section--evolution section--editorial">
         <SectionHeading
           eyebrow="Prototype evolution"
           title="The idea sharpened as the fidelity increased."
           description="M3 tested the interaction shape, M4 grounded the experience in hardware, and the final proposal turns that learning into a cohesive system story."
         />
 
-        <div className="prototype-grid">
-        <PlaceholderFrame
-          eyebrow="M3"
-          title="Speed dating + user enactments"
-          description="Low-fidelity props tested whether ambient, tactile, and spatial interventions could interrupt scrolling."
-          caption="Prototype wave 1"
+        <div className="prototype-grid prototype-grid--process">
+          <PlaceholderFrame
+            eyebrow="M3"
+            title="Speed dating + user enactments"
+            description="Low-fidelity props tested whether ambient, tactile, and spatial interventions could interrupt scrolling."
+            caption="Prototype wave 1"
+            className="placeholder-frame--process-asset"
             variant="prototype"
           />
           <PlaceholderFrame
@@ -342,6 +366,7 @@ export default function Page() {
             title="Functional dock prototype"
             description="Photon-based sensing, light behavior, and a speaker path for white noise and calming audio."
             caption="Prototype wave 2"
+            className="placeholder-frame--process-asset"
             variant="prototype"
           />
           <PlaceholderFrame
@@ -349,12 +374,13 @@ export default function Page() {
             title="PausePad system concept"
             description="A polished case study of the final dock, app, and usage-tracking experience."
             caption="Prototype wave 3"
+            className="placeholder-frame--process-asset placeholder-frame--process-asset-final"
             variant="diagram"
           />
         </div>
       </section>
 
-      <section className="section section--dark section--concept" id="concept">
+      <section className="section section--dark section--concept section--showcase" id="concept">
         <SectionHeading
           eyebrow="Final system"
           title="PausePad makes one action legible: put the phone down."
@@ -376,12 +402,13 @@ export default function Page() {
             title="High-level architecture diagram"
             description="The system view shows how the phone, sensor, controller, light, audio, and app work together."
             caption="High-level system view"
+            className="placeholder-frame--showcase-asset"
             variant="diagram"
           />
         </div>
       </section>
 
-      <section className="section section--light section--ideal" id="ideal">
+      <section className="section section--light section--ideal section--showcase" id="ideal">
         <SectionHeading
           eyebrow="Ideal system proposal"
           title="The finished version should feel like a complete bedtime transition system."
@@ -464,7 +491,7 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="section section--light section--video" id="video">
+      <section className="section section--light section--video section--editorial" id="video">
         <SectionHeading
           eyebrow="Video script"
           title="The video should show the experience, not just the device."
@@ -477,6 +504,7 @@ export default function Page() {
             title="3 to 5 minute contextual demo"
             description="Use the final video poster or thumbnail for the portfolio page."
             caption="Voiceover recommended"
+            className="placeholder-frame--editorial-asset"
             variant="video"
           />
 
@@ -505,7 +533,7 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="section section--light section--reflection section--split">
+      <section className="section section--light section--reflection section--split section--editorial">
         <SectionHeading
           eyebrow="Reflection + accessibility"
           title="The next version should be gentler, clearer, and more inclusive."
@@ -546,7 +574,7 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="section section--light section--appendix" id="appendix">
+      <section className="section section--light section--appendix section--utility" id="appendix">
         <SectionHeading
           eyebrow="Appendix"
           title="Source materials and supporting assets"
