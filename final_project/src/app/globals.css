@@ -810,12 +810,64 @@ img {
     radial-gradient(circle at 72% 74%, rgba(0, 113, 227, 0.08), transparent 24%);
 }
 
+.placeholder-frame__art--image {
+  --frame-media-inset: clamp(0.9rem, 1.6vw, 1.4rem);
+  background:
+    linear-gradient(
+      180deg,
+      color-mix(in srgb, var(--section-bg) 84%, #fff),
+      color-mix(in srgb, var(--section-surface) 94%, #fff)
+    ),
+    radial-gradient(circle at 35% 30%, rgba(0, 113, 227, 0.08), transparent 24%);
+}
+
 .placeholder-frame__halo {
   position: absolute;
   inset: 12% 14% 20%;
   border-radius: 1.4rem;
   background: radial-gradient(circle at center, rgba(0, 113, 227, 0.12), transparent 60%);
   filter: blur(16px);
+}
+
+.placeholder-frame__media {
+  position: absolute;
+  inset: var(--frame-media-inset);
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 1rem;
+}
+
+.placeholder-frame__media--hero-crop {
+  inset: 0;
+  border-radius: 1.35rem;
+}
+
+.placeholder-frame__image {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  border-radius: 1rem;
+  object-position: center;
+}
+
+.placeholder-frame__image--cover,
+.placeholder-frame__image--hero-crop {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.placeholder-frame__image--contain {
+  object-fit: contain;
+}
+
+.placeholder-frame__image--hero-crop {
+  transform: none;
 }
 
 .placeholder-frame__core {
@@ -932,12 +984,34 @@ img {
     radial-gradient(circle at 50% 50%, rgba(0, 113, 227, 0.12), transparent 14%);
 }
 
+.placeholder-frame__art.placeholder-frame__art--image {
+  border: 0;
+  background: transparent;
+}
+
+.placeholder-frame__art--image .placeholder-frame__halo {
+  display: none;
+}
+
 .placeholder-frame--hero-asset {
-  border-radius: 1.75rem;
+  gap: 0.85rem;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
 }
 
 .placeholder-frame--hero-asset .placeholder-frame__art {
   min-height: clamp(22rem, 42vw, 36rem);
+}
+
+.placeholder-frame--hero-asset .placeholder-frame__top,
+.placeholder-frame--hero-asset .placeholder-frame__body {
+  padding-inline: 0.2rem;
+}
+
+.placeholder-frame--hero-asset .placeholder-frame__body p {
+  max-width: 26rem;
 }
 
 .placeholder-frame--editorial-asset .placeholder-frame__art {

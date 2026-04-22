@@ -251,8 +251,12 @@ export default function Page() {
           eyebrow="Product shot"
           title="PausePad dock + app"
           description="The final product image should present PausePad as one connected dock-and-app system."
-          caption="16:9 / hero visual"
+          caption="Editorial crop / hero asset"
           className="placeholder-frame--hero-asset"
+          imageAlt="PausePad product shot showing the dock and companion app"
+          imageMode="hero-crop"
+          imagePosition="56% 50%"
+          imageSrc="/pausepad-images/product-shot.png"
           variant="product"
         />
       </section>
@@ -293,6 +297,9 @@ export default function Page() {
             description="Visualize the late-night behavior the team is designing against."
             caption="Research framing / context"
             className="placeholder-frame--editorial-asset"
+            imageAlt="Research framing visual for the late-night scrolling problem"
+            imageMode="contain"
+            imageSrc="/pausepad-images/research-framing.png"
             variant="research"
           />
         </div>
@@ -359,6 +366,9 @@ export default function Page() {
             description="Low-fidelity props tested whether ambient, tactile, and spatial interventions could interrupt scrolling."
             caption="Prototype wave 1"
             className="placeholder-frame--process-asset"
+            imageAlt="M3 low-fidelity prototype documentation"
+            imageMode="contain"
+            imageSrc="/pausepad-images/prototype-m3.jpg"
             variant="prototype"
           />
           <PlaceholderFrame
@@ -367,6 +377,9 @@ export default function Page() {
             description="Photon-based sensing, light behavior, and a speaker path for white noise and calming audio."
             caption="Prototype wave 2"
             className="placeholder-frame--process-asset"
+            imageAlt="M4 functional dock prototype"
+            imageMode="contain"
+            imageSrc="/pausepad-images/prototype-m4.png"
             variant="prototype"
           />
           <PlaceholderFrame
@@ -375,6 +388,9 @@ export default function Page() {
             description="A polished case study of the final dock, app, and usage-tracking experience."
             caption="Prototype wave 3"
             className="placeholder-frame--process-asset placeholder-frame--process-asset-final"
+            imageAlt="Final prototype concept visual"
+            imageMode="contain"
+            imageSrc="/pausepad-images/prototype-final.png"
             variant="diagram"
           />
         </div>
@@ -403,6 +419,9 @@ export default function Page() {
             description="The system view shows how the phone, sensor, controller, light, audio, and app work together."
             caption="High-level system view"
             className="placeholder-frame--showcase-asset"
+            imageAlt="High-level PausePad system architecture diagram"
+            imageMode="contain"
+            imageSrc="/pausepad-images/architecture-high-level.png"
             variant="diagram"
           />
         </div>
