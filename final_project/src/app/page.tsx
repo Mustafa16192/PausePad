@@ -198,11 +198,11 @@ export default function Page() {
           PausePad
         </Link>
         <nav className="nav-links" aria-label="Page sections">
+          <a href="#video">Video</a>
           <a href="#story">Story</a>
           <a href="#studies">Studies</a>
           <a href="#concept">Concept</a>
           <a href="#ideal">Ideal proposal</a>
-          <a href="#video">Video</a>
           <a href="#appendix">Appendix</a>
         </nav>
       </header>
@@ -259,6 +259,59 @@ export default function Page() {
           imageSrc="/pausepad-images/product-shot.png"
           variant="product"
         />
+      </section>
+
+      <section className="section section--light section--video section--editorial" id="video">
+        <SectionHeading
+          eyebrow="Demo video"
+          title="See the PausePad demo in action."
+          description="This is the filmed PausePad walkthrough showing the bedtime scenario, dock activation, and companion app as one connected system."
+        />
+
+        <div className="video-layout">
+          <article className="video-player">
+            <div className="video-player__top">
+              <span className="mono">PausePad demo</span>
+            </div>
+            <div className="video-player__frame">
+              <iframe
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="strict-origin-when-cross-origin"
+                src="https://www.youtube.com/embed/J858eHInSZU"
+                title="PausePad demo video"
+              />
+            </div>
+          </article>
+
+          <div className="video-notes">
+            <article className="note-card">
+              <p className="mono eyebrow">What this shows</p>
+              <h3>A complete bedtime transition walkthrough</h3>
+              <p>
+                The demo follows the shift from passive scrolling to placing the phone in
+                the dock and letting the room move into a calmer state.
+              </p>
+            </article>
+            <article className="note-card">
+              <p className="mono eyebrow">System response</p>
+              <h3>Dock, cues, and app work as one flow</h3>
+              <p>
+                Phone placement triggers the physical dock, the ambient response, and the
+                companion app so the bedtime action feels legible and immediate.
+              </p>
+            </article>
+            <article className="note-card">
+              <p className="mono eyebrow">Why it matters</p>
+              <h3>The routine becomes visible instead of optional</h3>
+              <p>
+                Rather than asking for more willpower, PausePad makes one healthier next
+                step easier to understand and easier to complete.
+              </p>
+            </article>
+          </div>
+        </div>
       </section>
 
       <section className="section section--light section--story section--split section--editorial" id="story">
@@ -507,48 +560,6 @@ export default function Page() {
               <li>Better support for shared rooms, different sleep habits, and accessibility needs.</li>
             </ul>
           </article>
-        </div>
-      </section>
-
-      <section className="section section--light section--video section--editorial" id="video">
-        <SectionHeading
-          eyebrow="Video script"
-          title="The video should show the experience, not just the device."
-          description="Use a 3 to 5 minute sequence that follows a student through a real evening routine: arriving home, scrolling, getting nudged by the dock, and settling into rest."
-        />
-
-        <div className="video-layout">
-          <PlaceholderFrame
-            eyebrow="Video thumbnail"
-            title="3 to 5 minute contextual demo"
-            description="Use the final video poster or thumbnail for the portfolio page."
-            caption="Voiceover recommended"
-            className="placeholder-frame--editorial-asset"
-            variant="video"
-          />
-
-          <div className="video-notes">
-            <article className="note-card">
-              <p className="mono eyebrow">Scene 01</p>
-              <h3>Arrive tired, default to scrolling</h3>
-              <p>Show the moment where the phone is the easiest escape.</p>
-            </article>
-            <article className="note-card">
-              <p className="mono eyebrow">Scene 02</p>
-              <h3>Dock activates, cue escalates</h3>
-              <p>Show light, audio, and pickup detection without overwhelming the scene.</p>
-            </article>
-            <article className="note-card">
-              <p className="mono eyebrow">Scene 03</p>
-              <h3>Phone is placed down, wind-down begins</h3>
-              <p>Show the user completing the action and the system shifting into rest mode.</p>
-            </article>
-            <article className="note-card">
-              <p className="mono eyebrow">Closing beat</p>
-              <h3>The room settles and the routine feels finished.</h3>
-              <p>End on a calm, readable state that makes the benefit of the system obvious.</p>
-            </article>
-          </div>
         </div>
       </section>
 
